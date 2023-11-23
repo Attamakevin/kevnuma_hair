@@ -31,7 +31,6 @@ python-dateutil
 python-dotenv
 PyYAML
 soupsieve
-SQLAlchemy
 gunicorn
 flask==2
 Werkzeug==2.0.0
