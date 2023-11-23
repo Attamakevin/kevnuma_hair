@@ -35,6 +35,6 @@ soupsieve
 SQLAlchemy
 Werkzeug
 gunicorn
-Flask 2.0.3
+Flask 2.0.0
 Werkzeug 3.0.0
 
