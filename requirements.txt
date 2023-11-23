@@ -29,7 +29,7 @@ MarkupSafe==2.1.3
 mysql==0.0.3
 mysqlclient
 python-dateutil
-python-dotenv==1.0.0
+python-dotenv
 PyYAML
 soupsieve
 SQLAlchemy
