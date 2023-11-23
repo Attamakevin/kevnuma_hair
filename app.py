@@ -12,10 +12,7 @@ from sqlalchemy import or_
 # Application
 app = Flask(__name__)
 
-app.config['STRIPE_PUBLIC_KEY'] = 'pk_test_51NwAbDIcVse6hx5oGRQi3by0J0dYRSxueBE33ogRwZ5znJDqagrIYL1gfdVBCQJrM620PGJSWsU2iEaIssPm1RqI009V9BRmC8'
-app.config['STRIPE_SECRET_KEY'] = 'sk_test_51NwAbDIcVse6hx5oZPSRTVhPIBXQbcrAdwrALxXQldutnVpqcRML8NLUKv2BXn33iANArUuKXPHalY8jyv5HhVFO00WtVsYQJH'
 
-stripe.api_key = app.config['STRIPE_SECRET_KEY']
 # Flask-Uploads setup
 photos = UploadSet('photos', IMAGES)
 app.config['UPLOADED_PHOTOS_DEST'] = 'images'
