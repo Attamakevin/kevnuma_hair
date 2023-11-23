@@ -13,8 +13,8 @@ colorama==0.4.6
 comtypes==1.2.0
 deep-translator==1.11.4
 email-validator==2.0.0.post2
-Flask==3.0.0
-Flask-Cors==3.0.8
+Flask
+Flask-Cors
 Flask-Googletrans==0.11
 Flask-Login==0.6.2
 Flask-Migrate==4.0.5
