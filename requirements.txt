@@ -33,6 +33,6 @@ python-dotenv
 PyYAML
 soupsieve
 SQLAlchemy
-Werkzeug==3.0.1
+Werkzeug
 gunicorn
 
