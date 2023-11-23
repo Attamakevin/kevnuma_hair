@@ -32,6 +32,6 @@ python-dotenv
 PyYAML
 soupsieve
 gunicorn
-flask==2
+flask==2.5.1
 Werkzeug==2.0.0
 
