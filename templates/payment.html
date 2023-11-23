@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Checkout | KevnumaHairPlace{% endblock %}
+
+{% block body %}
+
+<form method="POST" action="https://checkout.flutterwave.com/v3/hosted/pay">
+  <div style="
+    font-size: 14px;
+    font-family: "Moderat","Inter",sans-serif;
+    font-weight: 400;
+    color: #333;">
+    Your order is  ₦{{  grand_total_plus_shipping }}
+  </div>
+  <input type="hidden" name="public_key" value="FLWPUBK_TEST-02b9b5fc6406bd4a41c3ff141cc45e93-X" />
+  <input type="hidden" name="customer[email]" value="kevnumahairplace@gmail.com" />
+  <input type="hidden" name="customer[name]" value="Kevnuma_Hair_Place" />
+  <input type="hidden" name="tx_ref" value="txref-81123" />
+  <input type="hidden" name="amount" value="{{ grand_total_plus_shipping}}" />
+  <input type="hidden" name="currency" value="NGN" />
+  <input type="hidden" name="meta[source]" value="docs-html-test" />
+  <br>
+  <button type="submit" id="start-payment-button" style="cursor: pointer;
+    position: relative;
+    background-color: #ff9b00;
+    color: #12122c;
+    max-width: 30%;
+    padding: 7.5px 16px;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    transition: all .1s ease-in;
+    vertical-align: middle;"
+>Pay Now</button>
+</form>
+<div class="panel panel-primary">
+                        <div class="panel-heading">
+                                <h3 class="panel-title">Benefits</h3>
+                        </div>
+                        <div class="panel-body">
+                                Some of the benefits of shopping with us include:
+                        </div>
+                        <ul class="list-group">
+                                <li class="list-group-item">Buyer Protection</li>
+                                <li class="list-group-item">Next Day Delivery</li>
+                                <li class="list-group-item">Flexible Payment Options</li>
+                                <li class="list-group-item">7day Money Back Guarantee</li>
+                        </ul>
+                </div>
+
+{% endblock %}
