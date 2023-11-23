@@ -34,5 +34,5 @@ PyYAML
 soupsieve
 SQLAlchemy
 Werkzeug
-
+gunicorn
 
