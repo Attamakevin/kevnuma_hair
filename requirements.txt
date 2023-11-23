@@ -21,7 +21,7 @@ Flask-Migrate==4.0.5
 Flask-Script==2.0.6
 Flask-SQLAlchemy==3.0.5
 Flask-Uploads==0.2.1
-Flask-WTF==1.2.1
+Flask-WTF
 
 Jinja2==3.1.2
 Mako==1.0.7
@@ -34,5 +34,5 @@ PyYAML==6.0.1
 soupsieve==2.5
 SQLAlchemy==2.0.22
 Werkzeug==3.0.0
-WTForms==3.0.1
+
 
