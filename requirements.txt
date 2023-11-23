@@ -33,6 +33,6 @@ PyYAML
 soupsieve
 SQLAlchemy
 gunicorn
-flask==3
+flask==1
 Werkzeug==3.0.0
 python==3
