@@ -13,7 +13,7 @@ colorama==0.4.6
 comtypes==1.2.0
 deep-translator==1.11.4
 email-validator==2.0.0.post2
-Flask
+Flask==2
 Flask-Cors
 Flask-Googletrans==0.11
 Flask-Login==0.6.2
@@ -33,6 +33,6 @@ python-dotenv
 PyYAML
 soupsieve
 SQLAlchemy
-Werkzeug
+Werkzeug==3.0.1
 gunicorn
 
