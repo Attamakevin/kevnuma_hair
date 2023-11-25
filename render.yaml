@@ -1,8 +1,0 @@
-services:
-- name: web
-  env:
-    - key: FLASK_ENV
-      value: production
-  buildCommand: pip install -r requirements.txt
-  startCommand: gunicorn -w 4 -b 0.0.0.0:$PORT kevnumahair:app
-
