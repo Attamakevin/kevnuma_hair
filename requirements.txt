@@ -52,7 +52,7 @@ protobuf
 pyasn1
 pyasn1-modules
 pycodestyle
-pypiwin32
+
 python-dotenv
 python-editor
 pytoml
