@@ -72,6 +72,16 @@ class Order(db.Model):
         return db.session.query(db.func.sum(
             Order_Item.quantity)).filter(Order_Item.order_id == self.id).scalar()
 
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'reference': self.reference,
+            'first_name': self.first_name,
+            'last_name': self.last_name,
+            # ... (add other attributes as needed)
+            'status': self.status,
+            'payment_type': self.payment_type,
+        }
 class Order_Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     order_id = db.Column(db.Integer, db.ForeignKey('order.id'))
@@ -281,7 +291,7 @@ def checkout():
 
     db.session.add(order)
     db.session.commit()
-
+    session['current_order'] = order.to_dict()
     session['cart'] = []
     session.modified = True
 
@@ -294,9 +304,21 @@ def checkout():
                          quantity_total=quantity_total)
 @app.route('/payment')
 def payment():
-    grand_total_plus_shipping=Order.order_total(Order)
+    # Retrieve the order dictionary from the session
+    order_dict = session.get('current_order')
 
-    return render_template('payment.html',grand_total_plus_shipping=grand_total_plus_shipping)
+    # Check if there's an order in the session
+    if order_dict:
+        # Convert the dictionary back into an Order instance
+        order_instance = Order(**order_dict)
+
+        # Now you can call methods on the Order instance
+        order_total = order_instance.order_total()
+
+        return render_template('payment.html', order_total=order_total)
+    else:
+        # Handle the case where there's no order in the session
+        return render_template('payment.html', order_total=0)
 
 
 @app.route('/admin')
