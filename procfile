@@ -1,3 +1,1 @@
-web: gunicorn kevnuma_hair:app
-release: bash release.sh
-
+web: gunicorn app:app
