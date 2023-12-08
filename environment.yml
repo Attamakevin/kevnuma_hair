@@ -1,1 +1,1 @@
-web:gunicorn kevnuma_hair:app
+web:gunicorn app:app
